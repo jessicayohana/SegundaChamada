@@ -17,6 +17,7 @@ class Pedido
     public $data;
     public $motivo;
 
+
     public function __construct($curso, $turma, $disciplina, $professor, $data,
                                 $motivo)
     {
@@ -125,6 +126,8 @@ class Pedido
     {
         $this->motivo = $motivo;
     }
+
+
 }
 
 
