@@ -15,8 +15,8 @@ class CrudPedido
     public function salvar(Pedido $pedido)
     {
         $sql = ("INSERT INTO pedido (curso,turma,disciplina,professor,data,
-                                motivo) 
-        VALUES ('{$pedido->getCurso()}', '{$pedido->getTurma()}', '{$pedido->getDisciplina()}','{$pedido->getProfessor()}','{$pedido->getData()}', '{$pedido->getMotivo()}')");
+                                motivo,matricula) 
+        VALUES ('{$pedido->getCurso()}', '{$pedido->getTurma()}', '{$pedido->getDisciplina()}','{$pedido->getProfessor()}','{$pedido->getData()}', '{$pedido->getMotivo()}, '{$pedido->getMatricula()}')");
 
         $this->conexao->exec($sql);
     }
