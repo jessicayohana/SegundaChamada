@@ -12,6 +12,8 @@ if (mysqli_connect_errno())
 }
 
 $sql="SELECT * FROM pedido ";
+$id =
+
 $result=mysqli_query($con,$sql);
 
 ?>
@@ -25,23 +27,28 @@ $result=mysqli_query($con,$sql);
 <body>
 <table border="1">
     <tr>
+        <td>Parecer</td>
+        <td></td>
         <td>Curso</td>
         <td>Turma</td>
         <td>Disciplina</td>
         <td>Professor</td>
         <td>Data</td>
         <td>Motivo</td>
-        <td>Aluno</td>
+        <td>Matricula</td>
     </tr>
     <?php while ($dado = $result-> fetch_array()){?>
         <tr>
+            <td><input type="checkbox" value="deferido">Deferido</td>
+            <td><input type="checkbox" value="deferido">Indeferido</td>
             <td><?php echo $dado['curso'];?></td>
             <td><?php echo $dado['turma'];?></td>
             <td><?php echo $dado['disciplina'];?></td>
             <td><?php echo $dado['professor'];?></td>
             <td><?php echo $dado['data'];?></td>
             <td><?php echo $dado['motivo'];?></td>
-            <td><?php $sql="SELECT 'nome' FROM aluno "; echo $sql?>
+            <td><?php echo $dado['matricula'];?></td>
+
             </td>
 
         </tr>
